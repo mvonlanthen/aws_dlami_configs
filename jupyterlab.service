@@ -1,0 +1,16 @@
+[Unit]
+Description=Jupyter lab server
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+ExecStart=/home/ubuntu/anaconda3/bin/jupyter lab
+WorkingDirectory=/home/ubuntu
+User=ubuntu
+Group=ubuntu
+
+[Install]
+WantedBy=multi-user.target
