@@ -1,7 +1,6 @@
 #!/bin/bash
 
 
-# go to the home folder if not already
 cd ~
 echo pwd
 
@@ -28,7 +27,7 @@ mkdir ssl
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -subj "/C=CH/ST=Zurich/L=Zurich/O=organization/CN=name" -keyout ssl/mykey.key -out ssl/mycert.pem
 
 echo "set Jupyter lab as a system service"
-sudo cp aws_dlami_configs/jupyterlab.service /etc/systemd/
+sudo cp aws_dlami_configs/jupyterlab.service /etc/systemd/system/
 sudo systemctl enable jupyterlab.service
 sudo systemctl daemon-reload
 sudo systemctl start jupyterlab.service
