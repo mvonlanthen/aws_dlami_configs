@@ -41,6 +41,8 @@ Jupyter lab configuration such as password protection, ssl encryption, no-browse
    ```
 3. Set up SSL encryption for communication: create you certificate with the following command
    ```bash
+   mkdir ssl
+   cd ssl
    openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
    ```
    this will create two files ``mykey.key`` and ``mycert.pem``. Create the folder ``/home/ubuntu/ssl`` and copy these files to it. Once done, check if the path to the certification in ``jupyter_notebook_config.py`` are correct. The server is now accessible with https.
@@ -50,10 +52,10 @@ Add jupyter lab as a service starting at launch. Auto-relaunch enable. More info
 1. copy the file ``jupyterlab.service`` to ``/etc/systemd/system``. (root access required). Make any updates in the file which might be required such as the launch directory or the executable path.
 2. run the following command to start and enable the service
     ```bash
-    sudo systemctl enable jupyter.service
+    sudo systemctl enable jupyterlab.service
     sudo systemctl daemon-reload
-    sudo systemctl start jupyter.service
-    systemctl status jupyter.service
+    sudo systemctl start jupyterlab.service
+    systemctl status jupyterlab.service
     ```
 
 
