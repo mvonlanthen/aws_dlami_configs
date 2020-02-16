@@ -25,9 +25,7 @@ jupyter labextension install @jupyterlab/toc
 echo "set up jupyter lab"
 cp aws_dlami_configs/jupyter_notebook_config.py .jupyter/
 mkdir ssl
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 \ 
-    -subj "/C=CH/ST=Zurich/L=Zurich/O=organization/CN=name" \
-    -keyout ssl/mykey.key -out ssl/mycert.pem
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -subj "/C=CH/ST=Zurich/L=Zurich/O=organization/CN=name" -keyout ssl/mykey.key -out ssl/mycert.pem
 
 echo "set Jupyter lab as a system service"
 sudo cp aws_dlami_configs/jupyterlab.service /etc/systemd/
