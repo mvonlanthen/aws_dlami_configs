@@ -15,16 +15,15 @@ Parameters:
       - m5.2xlarge
       - m5.4xlarge
     ConstraintDescription: must be a valid EC2 instance type.
+  DeepLearningAMI:
+    Type: 'AWS::EC2::Image::Id'
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instances
     Type: 'AWS::EC2::KeyPair::KeyName'
     ConstraintDescription: must be the name of an existing EC2 KeyPair.
   SecurityGroup:
     Description: Name of the security group
-    Type: 'AWS::EC2::SecurityGroup'
-    Default: deep-learning-ami
-    AllowedValues:
-      - deep-learning-ami
+    Type: 'AWS::EC2::SecurityGroup::Id'
     ConstraintDescription: must be the name of an existing security group with at least port 22 and 8888 open
   SSHLocation:
     Description: The IP address range that can be used to SSH to the EC2 instances

@@ -13,6 +13,13 @@ User parameters
 alias lh=\"ls -lh\"" >> .bashrc
 source .bashrc
 
+echo "create folders structure"
+mkdir datasets
+mkdir development
+mkdir downloads
+mkdir models
+mkdir projects
+
 echo "update Anaconda"
 conda install jupyterlab -y
 conda install nodejs -y
@@ -20,6 +27,9 @@ jupyter labextension install @jupyterlab/toc
 
 # conda install -n tensorflow2_p36 tqdm pandas
 # conda install -n tensorflow_p36 tqdm pandas
+
+echo "clone git repository"
+git clone https://github.com/mvonlanthen/aws_dlami_configs.git
 
 echo "set up jupyter lab"
 cp aws_dlami_configs/jupyter_notebook_config.py .jupyter/
