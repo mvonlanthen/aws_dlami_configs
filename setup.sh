@@ -13,8 +13,8 @@ echo pwd
 echo "update .bashrc"
 echo "
 
-User parameters
----------------
+# User parameters
+# ---------------
 alias lh=\"ls -lh\"" >> .bashrc
 source .bashrc
 
@@ -26,17 +26,16 @@ mkdir "$root_folder_struc/"downloads
 mkdir "$root_folder_struc/"models
 mkdir "$root_folder_struc/"projects
 
+# update Anaconda, Jupyter Lab and other envs
 echo "update Anaconda"
-conda install jupyterlab -y
 conda install nodejs -y
 jupyter labextension install @jupyterlab/toc
 
-conda install -n tensorflow2_p36 tqdm pandas -y
-conda install -n tensorflow_p36 tqdm pandas -y
+conda install -n tensorflow2_p36 tqdm -y
+conda install -n tensorflow_p36 tqdm -y
 
-# echo "clone git repository"
-# git clone https://github.com/mvonlanthen/aws_dlami_configs.git
 
+# Set up Jupyter Lab as a startup service
 echo "set up jupyter lab"
 cp aws_dlami_configs/jupyter_notebook_config.py .jupyter/
 mkdir ssl
