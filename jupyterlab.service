@@ -7,7 +7,7 @@ StartLimitIntervalSec=0
 Type=simple
 Restart=always
 RestartSec=10
-ExecStart=/home/ubuntu/anaconda3/bin/jupyter lab
+ExecStart=export PATH="/home/ubuntu/anaconda3/bin:$PATH"; /home/ubuntu/anaconda3/bin/jupyter lab
 WorkingDirectory=/home/ubuntu
 User=ubuntu
 Group=ubuntu

@@ -18,6 +18,10 @@ echo "
 alias lh=\"ls -lh\"" >> .bashrc
 source .bashrc
 
+# mount the attached EBS volume. I am not sur if the name of the EBS volume 
+# remains the same on instance drive by the Nitro system
+sudo mount /dev/nvme0n1p1 attached_home/
+
 # create the folder structure
 echo "create folders structure"
 mkdir "$root_folder_struc/"datasets
@@ -47,6 +51,12 @@ sudo systemctl enable jupyterlab.service
 sudo systemctl daemon-reload
 sudo systemctl start jupyterlab.service
 
+# check if the service is running
+# systemctl status jupyterlab.service
+# journalctl -u jupyterlab.service
 
+# running with nohup
+# nohup jupyter lab > nohup_jupyterlab.out 2>&1 &
 
-
+# check which nohup jobs are running:
+# jobs -l

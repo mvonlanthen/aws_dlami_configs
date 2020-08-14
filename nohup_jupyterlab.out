@@ -1,0 +1,28 @@
+nohup: ignoring input
+[I 14:09:34.936 LabApp] [nb_conda_kernels] enabled, 17 kernels found
+[I 14:09:35.139 LabApp] Loading IPython parallel extension
+[I 14:09:35.835 LabApp] JupyterLab extension loaded from /home/ubuntu/anaconda3/lib/python3.7/site-packages/jupyterlab
+[I 14:09:35.835 LabApp] JupyterLab application directory is /home/ubuntu/anaconda3/share/jupyter/lab
+[I 14:09:36.633 LabApp] [nb_conda] enabled
+[I 14:09:36.633 LabApp] Serving notebooks from local directory: /home/ubuntu/aws_dlami_configs
+[I 14:09:36.633 LabApp] The Jupyter Notebook is running at:
+[I 14:09:36.633 LabApp] https://localhost:8888/
+[I 14:09:36.633 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 14:14:41.648 LabApp] SSL Error on 9 ('127.0.0.1', 55696): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1076)
+[W 14:14:41.648 LabApp] SSL Error on 10 ('127.0.0.1', 55698): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1076)
+[W 14:14:42.015 LabApp] SSL Error on 10 ('127.0.0.1', 55718): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1076)
+[W 14:14:42.058 LabApp] SSL Error on 11 ('127.0.0.1', 55720): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1076)
+[W 14:14:42.059 LabApp] SSL Error on 12 ('127.0.0.1', 55722): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1076)
+[W 14:14:42.061 LabApp] SSL Error on 13 ('127.0.0.1', 55724): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1076)
+[W 14:14:42.084 LabApp] SSL Error on 14 ('127.0.0.1', 55728): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1076)
+[W 14:14:42.657 LabApp] SSL Error on 10 ('127.0.0.1', 55736): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1076)
+[I 14:14:51.655 LabApp] 302 POST /login?next=%2Flab%3F (127.0.0.1) 1.18ms
+[I 14:15:00.172 LabApp] Build is up to date
+[W 14:15:00.482 LabApp] 404 GET /api/contents/attached_home/projects/imperial-logisitc_data-lake/notebooks?1591971300425 (127.0.0.1): No such file or directory: attached_home/projects/imperial-logisitc_data-lake/notebooks
+[W 14:15:00.482 LabApp] No such file or directory: attached_home/projects/imperial-logisitc_data-lake/notebooks
+[W 14:15:00.482 LabApp] 404 GET /api/contents/attached_home/projects/imperial-logisitc_data-lake/notebooks?1591971300425 (127.0.0.1) 1.16ms referer=https://localhost:8888/lab?
+[W 14:15:00.483 LabApp] 404 GET /api/contents/attached_home/projects/imperial-logisitc_data-lake/notebooks/Convert%20Excels%20to%20CSVs.ipynb?content=0&1591971300426 (127.0.0.1): No such file or directory: attached_home/projects/imperial-logisitc_data-lake/notebooks/Convert Excels to CSVs.ipynb
+[W 14:15:00.483 LabApp] No such file or directory: attached_home/projects/imperial-logisitc_data-lake/notebooks/Convert Excels to CSVs.ipynb
+[W 14:15:00.483 LabApp] 404 GET /api/contents/attached_home/projects/imperial-logisitc_data-lake/notebooks/Convert%20Excels%20to%20CSVs.ipynb?content=0&1591971300426 (127.0.0.1) 0.81ms referer=https://localhost:8888/lab?
+[C 14:16:38.756 LabApp] received signal 15, stopping
+[I 14:16:38.757 LabApp] Shutting down 0 kernels
