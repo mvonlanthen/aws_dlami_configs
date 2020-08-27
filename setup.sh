@@ -55,8 +55,13 @@ sudo systemctl start jupyterlab.service
 # systemctl status jupyterlab.service
 # journalctl -u jupyterlab.service
 
-# running with nohup
+
+# workaround if Jupyter Server cannot start
+#- running with nohup
 # nohup jupyter lab > nohup_jupyterlab.out 2>&1 &
 
-# check which nohup jobs are running:
-# jobs -l
+#- kill the Server
+# jupyter notebook list          #to get jupyter used port-number.
+# lsof -n -i4TCP:[port-number]   #to get PID, The PID is the second field in the output.
+# run kill -9 [PID]              #to kill this process.
+
